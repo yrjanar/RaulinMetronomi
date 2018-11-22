@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ListView
+        android:layout_width="365dp"
+        android:layout_height="269dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="7dp" />
+
+    <TextView
+        android:id="@+id/kappale"
+        android:layout_width="275dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="172dp"
+        android:text="@string/kappale"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tempo"
+        android:layout_width="89dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="152dp"
+        android:text="@string/_tempo"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/kappale" />
+
+    <Button
+        android:id="@+id/p-10"
+        android:onClick="paljonVahemmanTempoa"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="92dp"
+        android:text="@string/mk"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/p-1"
+        android:onClick="vahanVahemmanTempoa"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:text="@string/my"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/p-10"
+        app:layout_constraintTop_toTopOf="@+id/p-10" />
+
+    <Button
+        android:id="@+id/p1"
+        android:onClick="vahanLisaaTempoa"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:text="@string/py"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/p-1"
+        app:layout_constraintTop_toTopOf="@+id/p-1" />
+
+    <Button
+        android:id="@+id/p10"
+        android:onClick="paljonLisaaTempoa"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:text=">>"
+        app:layout_constraintStart_toEndOf="@+id/p1"
+        app:layout_constraintTop_toTopOf="@+id/p1" />
+
+    <SeekBar
+        android:id="@+id/saatoPalkki"
+        android:layout_width="367dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="64dp"
+        android:max="230"
+        android:progress="90"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/tallenna"
+        android:layout_width="75dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/poista"
+        android:layout_width="75dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:text="@string/delete"
+        app:layout_constraintStart_toEndOf="@+id/tallenna"
+        app:layout_constraintTop_toTopOf="@+id/tallenna" />
+
+    <Switch
+        android:id="@+id/onOff"
+        android:layout_width="104dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/onoff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/poista" />
+
+
+</android.support.constraint.ConstraintLayout>

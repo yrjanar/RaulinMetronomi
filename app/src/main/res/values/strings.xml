@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">RaulinMetronomi</string>
+    <string name="kappale">Kappale</string>
+    <string name="_tempo">120</string>
+    <string name="mk"><![CDATA[<<]]></string>
+    <string name="my"><![CDATA[<]]></string>
+    <string name="py"><![CDATA[>]]></string>
+    <string name="pk"><![CDATA[>>]]></string>
+    <string name="save">SAVE</string>
+    <string name="delete">DELETE</string>
+    <string name="onoff">OnOff</string>
+</resources>
