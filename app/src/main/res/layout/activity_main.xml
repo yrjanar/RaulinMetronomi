@@ -4,41 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#81cee6"
     tools:context=".MainActivity">
 
     <ListView
-        android:layout_width="365dp"
-        android:layout_height="269dp"
+        android:id="@+id/editListView"
+        android:layout_width="335dp"
+        android:layout_height="253dp"
+        android:layout_marginBottom="8dp"
+        android:footerDividersEnabled="true"
+        android:divider="@android:color/holo_green_light"
+        android:background="#3181de"
+        app:layout_constraintBottom_toTopOf="@+id/editTextKappale"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
+        android:dividerHeight="5dp"
+        android:clickable="true"
+        android:choiceMode="multipleChoice"
+        app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="7dp" />
+        tools:listheader="Kappale Tempo" />
 
-    <TextView
-        android:id="@+id/kappale"
-        android:layout_width="275dp"
-        android:layout_height="41dp"
+    <EditText
+        android:id="@+id/editTextKappale"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="172dp"
-        android:text="@string/kappale"
+        android:hint="Lisää kappale"
+        android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/tempo"
-        android:layout_width="89dp"
-        android:layout_height="70dp"
+    <EditText
+        android:id="@+id/editTextTempo"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="152dp"
-        android:text="@string/_tempo"
-        android:textSize="50sp"
-        android:textStyle="bold"
+        android:layout_marginBottom="172dp"
+        android:hint="Tempo"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/kappale" />
+        app:layout_constraintHorizontal_bias="0.885"
+        app:layout_constraintStart_toEndOf="@+id/editTextKappale" />
 
     <Button
         android:id="@+id/p-10"
@@ -57,7 +66,7 @@
         android:onClick="vahanVahemmanTempoa"
         android:layout_width="60dp"
         android:layout_height="40dp"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="8dp"
         android:text="@string/my"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/p-10"
@@ -68,7 +77,7 @@
         android:onClick="vahanLisaaTempoa"
         android:layout_width="60dp"
         android:layout_height="40dp"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="8dp"
         android:text="@string/py"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/p-1"
@@ -79,7 +88,7 @@
         android:onClick="paljonLisaaTempoa"
         android:layout_width="60dp"
         android:layout_height="40dp"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="8dp"
         android:text=">>"
         app:layout_constraintStart_toEndOf="@+id/p1"
         app:layout_constraintTop_toTopOf="@+id/p1" />
@@ -96,12 +105,12 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/tallenna"
+        android:id="@+id/add"
         android:layout_width="75dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/save"
+        android:text="LISÄÄ"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -110,9 +119,9 @@
         android:layout_width="75dp"
         android:layout_height="40dp"
         android:layout_marginStart="32dp"
-        android:text="@string/delete"
-        app:layout_constraintStart_toEndOf="@+id/tallenna"
-        app:layout_constraintTop_toTopOf="@+id/tallenna" />
+        android:text="POISTA"
+        app:layout_constraintStart_toEndOf="@+id/add"
+        app:layout_constraintTop_toTopOf="@+id/add" />
 
     <Switch
         android:id="@+id/onOff"
@@ -125,6 +134,28 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/poista" />
+
+    <TextView
+        android:id="@+id/textViewTempo"
+        android:layout_width="84dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="83dp"
+        android:text="120"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/p10" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="110dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="Kappale/ tempo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>
